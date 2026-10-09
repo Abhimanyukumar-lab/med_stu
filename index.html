@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedPass | Medical Conference 2026</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+:root{--teal:#078b87;--deep:#075b64;--mint:#e7f8f5;--ink:#142537}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:#f5f9fb}
+.navbar{background:#fff;border-bottom:1px solid #e4edf0}.brand{font-weight:800;color:var(--deep);font-size:1.35rem}.brand i{color:var(--teal)}
+.btn-teal{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:700}.btn-teal:hover{background:var(--deep);color:#fff}
+.hero{background:linear-gradient(120deg,#e8faf7 0%,#f5fbff 55%,#d7f0f3 100%);border-radius:26px;overflow:hidden}
+.hero-art{min-height:340px;background:radial-gradient(circle at 65% 38%,#b9e5e3 0 18%,transparent 19%),linear-gradient(135deg,#d7f3ef,#e8f4fa);display:flex;align-items:center;justify-content:center}
+.doctor-icon{font-size:9rem;color:#087f84;filter:drop-shadow(0 15px 12px #7dbab455)}
+.kicker{letter-spacing:.12em;color:var(--teal);font-weight:800;font-size:.8rem}
+h1{font-weight:850;letter-spacing:-.04em}.section-title{font-weight:800;letter-spacing:-.03em}
+.feature,.panel{background:#fff;border:1px solid #e4edf0;border-radius:18px;box-shadow:0 8px 28px #12344a08}
+.feature-icon{height:46px;width:46px;display:grid;place-items:center;background:var(--mint);color:var(--teal);border-radius:14px;font-size:1.35rem}
+.form-control,.form-select{border-color:#d9e4e9;padding:.72rem .85rem;border-radius:10px}.form-control:focus,.form-select:focus{border-color:var(--teal);box-shadow:0 0 0 .2rem #078b871a}
+.price{font-size:2rem;font-weight:850}.muted{color:#66798a}.pill{background:#e5f8ef;color:#14804a;border-radius:100px;padding:.28rem .65rem;font-weight:700;font-size:.78rem}
+.step{height:34px;width:34px;display:grid;place-items:center;border-radius:50%;background:var(--teal);color:#fff;font-weight:800}
+.pass-card{max-width:760px;margin:auto;border-radius:20px;overflow:hidden;border:1px solid #d8e5e8;background:#fff;box-shadow:0 15px 45px #0b384b12}
+.pass-head{background:linear-gradient(100deg,#078b87,#075b64);color:white;padding:20px 24px}.pass-body{padding:25px}
+.qrbox{background:white;border:1px solid #dbe5e8;border-radius:14px;padding:10px;min-height:160px;display:grid;place-items:center}
+.qrpattern{width:130px;height:130px;background:repeating-conic-gradient(#102a32 0% 25%,white 0% 50%) 0 0/14px 14px;border:8px solid white;outline:1px solid #dce7e9}
+footer{background:#102a36;color:#d4e2e8}
+.hide{display:none!important}
+@media(max-width:767px){.hero-art{min-height:190px}.doctor-icon{font-size:6rem}.hero-copy{padding:2rem!important}.price{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+ <div class="container"><a class="navbar-brand brand" href="#"><i class="bi bi-heart-pulse-fill me-2"></i>MedPass</a>
+ <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+ <div id="nav" class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+ <li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li><li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+ <li class="nav-item"><button class="btn btn-outline-secondary" onclick="showSection('loginSection')">Login</button></li>
+ <li class="nav-item"><button class="btn btn-teal" onclick="showSection('registerSection')">Register Now</button></li>
+ </ul></div>
+ </div>
+</nav>
+<main class="container py-4 py-lg-5">
+<section id="homeSection" class="hero mb-5">
+ <div class="row g-0 align-items-stretch">
+  <div class="col-lg-7 p-4 p-md-5 hero-copy d-flex flex-column justify-content-center">
+   <div class="kicker mb-3">MEDICAL CONFERENCE 2026</div><h1 class="display-4 mb-3">Learn. Connect.<br><span style="color:var(--teal)">Grow together.</span></h1>
+   <p class="lead muted mb-4">A focused learning and networking experience for medical students, doctors and healthcare professionals.</p>
+   <div class="d-flex flex-wrap gap-3 mb-4"><span><i class="bi bi-calendar-event text-success me-2"></i>20–21 March 2026</span><span><i class="bi bi-geo-alt text-success me-2"></i>Bhopal, India</span><span><i class="bi bi-people text-success me-2"></i>Limited seats</span></div>
+   <div><button class="btn btn-teal btn-lg px-4" onclick="showSection('registerSection')">Register for ₹499 <i class="bi bi-arrow-right ms-2"></i></button></div>
+   <small class="muted mt-3">Demo preview · Event details can be changed after client approval.</small>
+  </div>
+  <div class="col-lg-5 hero-art"><div class="text-center"><i class="bi bi-person-badge doctor-icon"></i><div class="fw-bold text-success">Medical community. One place.</div><small class="muted">Connect · Learn · Participate</small></div></div>
+ </div>
+</section>
+<section id="benefits" class="mb-5">
+ <div class="text-center mb-4"><div class="kicker">WHY MEDPASS</div><h2 class="section-title">Everything for your event entry</h2><p class="muted">Simple registration, secure payment flow and a digital pass.</p></div>
+ <div class="row g-3">
+  <div class="col-md-3 col-6"><div class="feature p-4 h-100"><div class="feature-icon mb-3"><i class="bi bi-mortarboard"></i></div><h6 class="fw-bold">Student Registration</h6><small class="muted">Academic and contact details in one form.</small></div></div>
+  <div class="col-md-3 col-6"><div class="feature p-4 h-100"><div class="feature-icon mb-3"><i class="bi bi-shield-check"></i></div><h6 class="fw-bold">Test Payment Flow</h6><small class="muted">Razorpay test mode can be connected for demo.</small></div></div>
+  <div class="col-md-3 col-6"><div class="feature p-4 h-100"><div class="feature-icon mb-3"><i class="bi bi-qr-code"></i></div><h6 class="fw-bold">QR Entry Pass</h6><small class="muted">Unique demo pass after confirmation.</small></div></div>
+  <div class="col-md-3 col-6"><div class="feature p-4 h-100"><div class="feature-icon mb-3"><i class="bi bi-person-check"></i></div><h6 class="fw-bold">Check-in Ready</h6><small class="muted">Pass design planned for event-day scanning.</small></div></div>
+ </div>
+</section>
+<section id="registerSection" class="panel p-4 p-md-5 mb-5 hide">
+ <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4"><div><div class="kicker">STEP 1 OF 2</div><h2 class="section-title">Student registration</h2><p class="muted mb-0">Enter your details to preview the registration flow.</p></div><span class="badge text-bg-light p-2">Fee: ₹499</span></div>
+ <form id="regForm"><div class="row g-3">
+  <div class="col-md-6"><label class="form-label fw-semibold">Full name *</label><input class="form-control" id="fullName" required placeholder="Enter your full name"></div>
+  <div class="col-md-6"><label class="form-label fw-semibold">Email address *</label><input class="form-control" id="email" type="email" required placeholder="you@example.com"></div>
+  <div class="col-md-6"><label class="form-label fw-semibold">Mobile number *</label><input class="form-control" id="mobile" pattern="[0-9]{10}" required placeholder="10-digit mobile number"></div>
+  <div class="col-md-6"><label class="form-label fw-semibold">College / Medical university *</label><input class="form-control" id="college" required placeholder="College name"></div>
+  <div class="col-md-6"><label class="form-label fw-semibold">Course *</label><select class="form-select" id="course" required><option value="">Select course</option><option>MBBS</option><option>BDS</option><option>BAMS</option><option>BHMS</option><option>Nursing</option><option>Pharmacy</option><option>Other</option></select></div>
+  <div class="col-md-6"><label class="form-label fw-semibold">Academic year *</label><select class="form-select" id="year" required><option value="">Select year</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>Final Year</option><option>Intern</option><option>Postgraduate</option></select></div>
+  <div class="col-12"><label class="form-label fw-semibold">Registration notes (optional)</label><textarea class="form-control" id="notes" rows="2" placeholder="Any accessibility or event-related note"></textarea></div>
+  <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="consent" required><label class="form-check-label small" for="consent">I confirm these details are correct and agree to the event registration terms.</label></div></div>
+  <div class="col-12 d-flex gap-2 flex-wrap mt-4"><button class="btn btn-teal btn-lg px-4" type="submit">Review & Continue <i class="bi bi-arrow-right ms-2"></i></button><button type="button" class="btn btn-light btn-lg" onclick="showSection('homeSection')">Cancel</button></div>
+ </div></form>
+</section>
+<section id="paymentSection" class="panel p-4 p-md-5 mb-5 hide">
+ <div class="text-center mb-4"><div class="kicker">STEP 2 OF 2</div><h2 class="section-title">Review and payment</h2><p class="muted">Review your information before continuing.</p></div>
+ <div class="row g-4"><div class="col-lg-7"><div class="p-4 rounded-4" style="background:#f7fafb">
+ <h5 class="fw-bold mb-3">Registration details</h5><div id="reviewDetails" class="small"></div><hr><div class="d-flex justify-content-between"><span>Registration fee</span><strong>₹499.00</strong></div><div class="d-flex justify-content-between mt-2 fs-5"><strong>Total</strong><strong>₹499.00</strong></div>
+ </div></div><div class="col-lg-5"><div class="p-4 rounded-4 border h-100"><h5 class="fw-bold">Secure payment</h5><p class="muted small">Razorpay test mode integration is planned for the demo.</p><div class="d-flex gap-2 flex-wrap mb-3"><span class="badge text-bg-light p-2">UPI</span><span class="badge text-bg-light p-2">Cards</span><span class="badge text-bg-light p-2">Netbanking</span></div>
+ <div class="alert alert-warning small">Prototype mode: this button simulates a successful payment. No money is charged. Connect the Razorpay test key + backend before showing an actual gateway checkout.</div>
+ <button class="btn btn-primary btn-lg w-100" onclick="simulatePayment()"><i class="bi bi-lock-fill me-2"></i>Simulate successful payment</button><button class="btn btn-link w-100 mt-2" onclick="showSection('registerSection')">Back to details</button>
+ </div></div></div>
+</section>
+<section id="successSection" class="panel p-4 p-md-5 mb-5 hide">
+ <div class="text-center mb-4"><div class="display-3 text-success"><i class="bi bi-check-circle-fill"></i></div><h2 class="section-title">Registration successful!</h2><p class="muted">Demo payment recorded locally. Your preview pass is ready.</p></div>
+ <div class="row justify-content-center"><div class="col-lg-8"><div class="p-4 rounded-4" style="background:#eaf9f1" id="successDetails"></div></div></div>
+ <div class="d-flex justify-content-center flex-wrap gap-2 mt-4"><button class="btn btn-teal btn-lg" onclick="showSection('passSection')"><i class="bi bi-qr-code me-2"></i>View digital pass</button><button class="btn btn-outline-secondary btn-lg" onclick="window.print()"><i class="bi bi-printer me-2"></i>Print confirmation</button></div>
+</section>
+<section id="passSection" class="mb-5 hide">
+ <div class="text-center mb-4"><div class="kicker">YOUR DIGITAL PASS</div><h2 class="section-title">Student entry pass</h2><p class="muted">Demo preview only — not valid for real-world entry.</p></div>
+ <div class="pass-card"><div class="pass-head d-flex justify-content-between align-items-center"><div><h4 class="fw-bold mb-0"><i class="bi bi-heart-pulse-fill me-2"></i>MedPass</h4><small>Medical Conference 2026</small></div><div class="text-end small">20–21 March 2026<br>Bhopal, India</div></div>
+ <div class="pass-body"><div class="row align-items-center g-4"><div class="col-md-7"><div class="kicker">STUDENT ENTRY PASS</div><h3 id="passName" class="fw-bold mt-2 mb-1">Student Name</h3><div id="passCourse" class="muted mb-3">Course · College</div><div class="small mb-2"><span class="muted">Registration ID</span><br><strong id="passId">MP2026-DEMO</strong></div><div class="small mb-2"><span class="muted">Email</span><br><strong id="passEmail">student@example.com</strong></div><span class="pill mt-2 d-inline-block"><i class="bi bi-check-circle-fill me-1"></i>DEMO PASS</span></div>
+ <div class="col-md-5 text-center"><div class="qrbox"><div class="qrpattern" aria-label="Decorative demo QR pattern"></div></div><small class="muted d-block mt-2">Decorative QR placeholder</small></div></div><hr><div class="d-flex justify-content-between flex-wrap gap-2 small muted"><span>Please bring your valid college ID.</span><span>Non-transferable · Demo only</span></div></div></div>
+ <div class="text-center mt-4"><button class="btn btn-teal me-2" onclick="window.print()"><i class="bi bi-printer me-2"></i>Print pass</button><button class="btn btn-outline-secondary" onclick="showSection('homeSection')">Back to home</button></div>
+</section>
+<section id="loginSection" class="panel p-4 p-md-5 mb-5 hide"><div class="row justify-content-center"><div class="col-lg-6"><div class="kicker">STUDENT PORTAL</div><h2 class="section-title">Welcome back</h2><p class="muted">This is a visual prototype. Authentication will be implemented in Spring Boot.</p><form onsubmit="event.preventDefault();alert('Demo only: login will be enabled in the backend version.');"><label class="form-label">Email address</label><input class="form-control mb-3" type="email" required placeholder="you@example.com"><label class="form-label">Password</label><input class="form-control mb-3" type="password" required placeholder="Enter password"><button class="btn btn-teal w-100">Login preview</button></form></div></div></section>
+<section id="about" class="panel p-4 p-md-5 mb-5"><div class="row align-items-center g-4"><div class="col-lg-7"><div class="kicker">ABOUT THE EVENT</div><h2 class="section-title">A smoother way to manage conference registration</h2><p class="muted">MedPass brings registration, payment confirmation and digital entry pass into one streamlined journey. This first version is intended for client design review before backend development.</p><ul class="list-unstyled"><li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mobile-friendly registration experience</li><li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Payment gateway-ready checkout design</li><li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Unique pass and event check-in roadmap</li></ul></div><div class="col-lg-5"><div class="p-4 rounded-4" style="background:var(--mint)"><div class="kicker">REGISTRATION FEE</div><div class="price">₹499 <small class="fs-6 fw-normal">/ student</small></div><p class="muted mb-3">One registration · One digital pass</p><button class="btn btn-teal w-100" onclick="showSection('registerSection')">Start registration</button></div></div></div></section>
+<section id="faq" class="panel p-4 p-md-5"><div class="kicker">FAQ</div><h2 class="section-title mb-4">Frequently asked questions</h2><div class="accordion" id="faqList">
+<div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">Is this the final payment integration?</button></h2><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqList"><div class="accordion-body">No. The current prototype simulates payment. Razorpay test mode will be connected using a backend order and signature verification.</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">Is the QR code valid for entry?</button></h2><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">No. The displayed QR area is a placeholder. The production version will generate a unique, verifiable QR token after verified payment.</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">What happens after client approval?</button></h2><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">We will implement the approved design in React and Spring Boot, with MySQL persistence, email verification, Razorpay test/live modes and admin check-in.</div></div></div>
+</div></section>
+</main>
+<footer class="mt-5 py-4"><div class="container d-flex justify-content-between flex-wrap gap-2"><span><i class="bi bi-heart-pulse-fill me-2"></i><strong>MedPass</strong> · Medical Conference 2026</span><small>Client demo prototype · Not for real registrations or payments</small></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let registration = {};
+const sections = ['homeSection','registerSection','paymentSection','successSection','passSection','loginSection'];
+function showSection(id){sections.forEach(s=>document.getElementById(s).classList.toggle('hide',s!==id)); if(id==='homeSection'){document.getElementById('about').scrollIntoView({behavior:'smooth',block:'start'});}else{document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});} }
+document.getElementById('regForm').addEventListener('submit',function(e){e.preventDefault();registration={name:fullName.value.trim(),email:email.value.trim(),mobile:mobile.value.trim(),college:college.value.trim(),course:course.value,year:year.value,notes:notes.value};document.getElementById('reviewDetails').innerHTML=`<div class="row mb-2"><div class="col-5 muted">Full name</div><div class="col-7 fw-semibold">${escapeHtml(registration.name)}</div></div><div class="row mb-2"><div class="col-5 muted">Email</div><div class="col-7 fw-semibold">${escapeHtml(registration.email)}</div></div><div class="row mb-2"><div class="col-5 muted">Mobile</div><div class="col-7 fw-semibold">${escapeHtml(registration.mobile)}</div></div><div class="row mb-2"><div class="col-5 muted">College</div><div class="col-7 fw-semibold">${escapeHtml(registration.college)}</div></div><div class="row mb-2"><div class="col-5 muted">Course / year</div><div class="col-7 fw-semibold">${escapeHtml(registration.course)} · ${escapeHtml(registration.year)}</div></div>`;showSection('paymentSection');});
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function simulatePayment(){if(!registration.name){alert('Please complete registration first.');return;}let id='MP26-'+Math.random().toString(36).slice(2,8).toUpperCase();registration.id=id;document.getElementById('successDetails').innerHTML=`<div class="row mb-2"><div class="col-5">Registration ID</div><div class="col-7 fw-bold">${id}</div></div><div class="row mb-2"><div class="col-5">Event</div><div class="col-7">Medical Conference 2026</div></div><div class="row mb-2"><div class="col-5">Name</div><div class="col-7">${escapeHtml(registration.name)}</div></div><div class="row mb-2"><div class="col-5">Amount</div><div class="col-7">₹499 (simulated)</div></div><div class="row"><div class="col-5">Payment status</div><div class="col-7"><span class="pill">Demo success</span></div></div>`;document.getElementById('passName').textContent=registration.name;document.getElementById('passCourse').textContent=registration.course+' · '+registration.year+' · '+registration.college;document.getElementById('passId').textContent=id;document.getElementById('passEmail').textContent=registration.email;showSection('successSection');}
+</script>
+</body></html>
